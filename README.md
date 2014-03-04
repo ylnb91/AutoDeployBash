@@ -1,13 +1,25 @@
-##自动部署脚本
+##Java-web-cluster-auto-deployment
 
+This shell/ant script tool will do the following things:
 
-环境：Centos
+- Initial the tomcat instance if it does not exist;
+- Checkout source coude from svn server;
+- Build the source code to war file;
+- Deploy the war file to specified tomcat instance;
+- Bring up/down tomcat instance;
+- Compress js/css files;
+- Make nginx reload to take updated static files;
 
-软件：Tomcat、Nginx，Tomcat放在当前文件夹下作为模板，Nginx放在/usr/localxia
+Features:
 
-启动：./auto-deploy.sh prod
+- Auto detect the svn path, support check codes from trunk, branches and tags;
+- Support http/https tomcat instance, the tomcat template is configurable;
+- Auto create command file under /etc/init.d/ to enable new tomcat instance start/stop as service;
+- Support quick re-deployment for both single tomcat instance or tomcat cluster;
+- Paring the pom.xml to download the dependency jars from Manven center repository;
+- No shutdown in cluster deployment process;
+- Support Nginx reload static files manually or automatically;
+- Support cross server deployment.
 
-然后按提示进行。
-
-脚本已经做到nginx、tomcat负载均衡和静态文件的分离。
-
+Useage:
+ To be filled...
