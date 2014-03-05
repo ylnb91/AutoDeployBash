@@ -1,25 +1,10 @@
-##Java-web-cluster-auto-deployment
+##Java项目自动部署脚本
 
-This shell/ant script tool will do the following things:
+功能:
 
-- Initial the tomcat instance if it does not exist;
-- Checkout source coude from svn server;
-- Build the source code to war file;
-- Deploy the war file to specified tomcat instance;
-- Bring up/down tomcat instance;
-- Compress js/css files;
-- Make nginx reload to take updated static files;
-
-Features:
-
-- Auto detect the svn path, support check codes from trunk, branches and tags;
-- Support http/https tomcat instance, the tomcat template is configurable;
-- Auto create command file under /etc/init.d/ to enable new tomcat instance start/stop as service;
-- Support quick re-deployment for both single tomcat instance or tomcat cluster;
-- Paring the pom.xml to download the dependency jars from Manven center repository;
-- No shutdown in cluster deployment process;
-- Support Nginx reload static files manually or automatically;
-- Support cross server deployment.
-
-Useage:
- To be filled...
+- 添加tomecat instance 如果输入的instance不存在;
+- svn checkout;
+- 用ant 打包checkout的文件;
+- 把包部署到tomcat中，启动;
+- 压缩js，css等静态文件;
+- 修改nginx.conf中相关静态文件的配置，reload nginx;
